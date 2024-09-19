@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Chatbot</title>
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <video width="320" height="240" autoplay muted loop>
+            <source src="Black and White Modern Minimalist Accounting Animated Logo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="ep-chatbot-high-resolution-logo-black-transparent.png" alt="Logo">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="chat.html">New Chat</a></li>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Modules</a></li>
+            </ul>
+        </div>
+        <div class="logout">
+            <button id="logout-button" onclick="window.location.href='index.html'">Logout</button>
+            <!-- Make sure this id matches in both HTML and JS -->
+            <!-- <button id="logout-button">Logout</button> -->
+            <script type="module" src="./logout.js"></script>
+
+        </div>
+        
+        
+    </div>
+
+    <!-- Chat Container -->
+    <div class="chat-container">
+        <div id="chatbox">
+            <center><h4 style="font-size: large;">HOW CAN I HELP YOU  </h4></center>
+            <div id="chat-log"></div>
+        </div>
+        <div class="input-container">
+            <input id="user-input" type="text" placeholder="Type your message here..." autofocus>
+            <button id="send-button" onclick="sendMessage()">
+                <i class="fas fa-share"></i>
+
+            </button>
+        </div>
+    </div>
+
+    <script src="chats.js"></script>
+    <!-- <script type="module" src="./homepage.js"></script> -->
+</body>
+</html>
